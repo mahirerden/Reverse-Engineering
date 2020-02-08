@@ -16,7 +16,11 @@
     "operatorsAliases": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
