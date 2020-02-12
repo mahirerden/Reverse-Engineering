@@ -2,46 +2,89 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Passport Authentication - Sign Up Page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="stylesheet/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand ml-3" href="#">Art Gallery</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex flex-row-reverse mr-5" id="navbarNav">
+      <ul class="navbar-nav justify-content-center">
+        <li class="nav-item active">
+          <a class="nav-item nav-link nav5" href="/members.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav1" href="/profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav2 active" href="/signup.html">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav3" href="/login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav4" href="/logout">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link nav6" href="#">Sign in as : <span class="member-name"></span></a>
+        </li>
+      </ul>
     </div>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="/login">here</a></p>
+  <div class="container d-flex justify-content-center">
+    <div class="signup_container mt-5">
+      <div class="row">
+        <div class="col-md-7 offset-md-3 loginForm2">
+          <h2>Sign Up Form</h2>
+          <form class="signup">
+            <div class="form-group">
+              <label for="exampleInputFirstName">First Name</label>
+              <input type="first_name" class="form-control" id="first_name-input" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputLastName">Last Name</label>
+              <input type="last_name" class="form-control" id="last_name-input" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password-input" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword2">Confirm Password</label>
+              <input type="password" class="form-control" id="confirm_password-input" placeholder="Confirm Password"
+                required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+          <br>
+        <div class="alert alert-danger" id="alert" role="alert" display="none">
+          <span class="msg">error</span>
+        </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/signup.js"></script>
 
 </body>
